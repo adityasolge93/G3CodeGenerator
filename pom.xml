@@ -9,10 +9,19 @@
     <version>1.0.0</version>
 
     <properties>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/com.squareup/javapoet -->
+        <dependency>
+            <groupId>com.squareup</groupId>
+            <artifactId>javapoet</artifactId>
+            <version>1.13.0</version>
+        </dependency>
+    </dependencies>
 
     <build>
         <plugins>
@@ -30,6 +39,10 @@
                             <version>1.0.0</version>
                         </path>
                     </annotationProcessorPaths>
+                    <annotationProcessors>
+                        <annotationProcessor>com.gogettergeeks.processor.FileDBProcessor</annotationProcessor>
+                        <annotationProcessor>com.gogettergeeks.processor.MySqlProcessor</annotationProcessor>
+                    </annotationProcessors>
                 </configuration>
             </plugin>
         </plugins>

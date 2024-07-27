@@ -20,7 +20,7 @@ import java.util.List;
 import java.util.Set;
 
 @SupportedAnnotationTypes("com.gogettergeeks.annotation.FileDBGenerated")
-@SupportedSourceVersion(SourceVersion.RELEASE_17)
+@SupportedSourceVersion(SourceVersion.RELEASE_21)
 public class FileDBProcessor extends AbstractProcessor {
     private static final List<String> EXCEPTION_CLASS_NAMES = new ArrayList<>() {{
         add("RequestException");
